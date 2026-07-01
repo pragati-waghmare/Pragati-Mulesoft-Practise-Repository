@@ -1,0 +1,73 @@
+{
+  "basicConstraints": 47,
+  "criticalExtensionOIDs": [
+    "lorem",
+    "amet"
+  ],
+  "extendedKeyUsage": [
+    "mi",
+    "molestie"
+  ],
+  "extensions": [
+    {
+      "criticality": false,
+      "oid": "consectetur"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Alethea",
+      "type": 12
+    }
+  ],
+  "issuerDN": {
+    "commonName": "molestie",
+    "name": "Burl"
+  },
+  "issuerUniqueID": [
+    true,
+    false
+  ],
+  "issuerX500Principal": {
+    "name": "Alexis"
+  },
+  "keyUsage": [
+    true,
+    false
+  ],
+  "name": "Alana",
+  "nonCriticalExtensionOIDs": [
+    "ipsum",
+    "elit",
+    "tempor"
+  ],
+  "notAfter": "2025-12-11",
+  "notBefore": "2022-03-26",
+  "publicKey": {
+    "algorithm": "aliquam",
+    "modulus": 19,
+    "params": 8,
+    "publicKey": "Pellentesque"
+  },
+  "serialNumber": 33,
+  "serialNumberObject": {
+    "serialNumber": 88
+  },
+  "sigAlgName": "arcu",
+  "sigAlgOID": "pretium",
+  "subjectAlternativeNames": [
+    {
+      "name": "Anabel",
+      "type": 64
+    }
+  ],
+  "subjectDN": {
+    "commonName": "In",
+    "name": "Alysia"
+  },
+  "subjectX500Principal": {
+    "name": "Alice"
+  },
+  "type": "a",
+  "version": 13
+}

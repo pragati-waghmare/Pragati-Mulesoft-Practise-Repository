@@ -27,5 +27,22 @@
             </ee:message>
         </ee:transform>
         <logger doc:id="qqrsil" doc:name="Logger" message="#[payload]"></logger>
+        <error-handler>
+            <on-error-continue >
+                <ee:transform doc:name="Transform" doc:id="btsqnw" >
+                    <ee:message >
+                        <ee:set-payload doc:name="Set payload" doc:id="cfzcib" ><![CDATA[%dw 2.0
+output application/json
+---
+{
+  "Error Description": error.description,
+  "Error Message": error.message
+}            ]]></ee:set-payload>
+                    </ee:message>
+                </ee:transform>
+                <logger doc:name="Logger" doc:id="bibyae" message="#[payload]"/>
+                
+            </on-error-continue>
+        </error-handler>
     </flow>
 </mule>
