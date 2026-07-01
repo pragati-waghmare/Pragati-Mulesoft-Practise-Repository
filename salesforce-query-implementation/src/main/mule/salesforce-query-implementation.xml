@@ -29,20 +29,19 @@
         <logger doc:id="qqrsil" doc:name="Logger" message="#[payload]"></logger>
         <error-handler>
             <on-error-continue >
-                <ee:transform doc:name="Transform" doc:id="btsqnw" >
+                <ee:transform doc:name="Transform" doc:id="fstpux" >
                     <ee:message >
-                        <ee:set-payload doc:name="Set payload" doc:id="cfzcib" ><![CDATA[%dw 2.0
+                        <ee:set-payload doc:name="Set payload" doc:id="nkgbzi" ><![CDATA[%dw 2.0
 output application/json
 ---
 {
-  "Error Description": error.description,
-  "Error Message": error.message
-}            ]]></ee:set-payload>
+  "error Description": error.description,
+  "error Message": error.message
+}]]></ee:set-payload>
                     </ee:message>
                 </ee:transform>
-                <logger doc:name="Logger" doc:id="bibyae" message="#[payload]"/>
-                <logger doc:name="Logger" doc:id="iwrugu"/>
-                <logger doc:name="Logger" doc:id="qeunpl" message="#[payload]"/>
+                <logger doc:name="Logger" doc:id="uhvcse" message="#[payload]"/>
+                <logger doc:name="Logger" doc:id="huuluu" message="#[payload]"/>
                 
             </on-error-continue>
         </error-handler>

@@ -1,0 +1,74 @@
+{
+  "basicConstraints": 50,
+  "criticalExtensionOIDs": [
+    "tempor",
+    "tempor"
+  ],
+  "extendedKeyUsage": [
+    "amet",
+    "sit",
+    "lorem"
+  ],
+  "extensions": [
+    {
+      "criticality": false,
+      "oid": "consectetur"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Cornelius",
+      "type": 68
+    }
+  ],
+  "issuerDN": {
+    "commonName": "faucibus",
+    "name": "Bryant"
+  },
+  "issuerUniqueID": [
+    true,
+    true,
+    true
+  ],
+  "issuerX500Principal": {
+    "name": "Brooks"
+  },
+  "keyUsage": [
+    true,
+    true
+  ],
+  "name": "Danilo",
+  "nonCriticalExtensionOIDs": [
+    "convallis",
+    "a"
+  ],
+  "notAfter": "2022-11-23",
+  "notBefore": "2025-05-13",
+  "publicKey": {
+    "algorithm": "vitae",
+    "modulus": 20,
+    "params": 2,
+    "publicKey": "sed"
+  },
+  "serialNumber": 63,
+  "serialNumberObject": {
+    "serialNumber": 95
+  },
+  "sigAlgName": "venenatis",
+  "sigAlgOID": "dolor",
+  "subjectAlternativeNames": [
+    {
+      "name": "Alec",
+      "type": 1
+    }
+  ],
+  "subjectDN": {
+    "commonName": "sed",
+    "name": "Damion"
+  },
+  "subjectX500Principal": {
+    "name": "Almeta"
+  },
+  "type": "lorem",
+  "version": 64
+}
