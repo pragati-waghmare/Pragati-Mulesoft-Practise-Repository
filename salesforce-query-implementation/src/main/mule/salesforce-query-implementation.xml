@@ -41,6 +41,8 @@ output application/json
                     </ee:message>
                 </ee:transform>
                 <logger doc:name="Logger" doc:id="bibyae" message="#[payload]"/>
+                <logger doc:name="Logger" doc:id="iwrugu"/>
+                <logger doc:name="Logger" doc:id="qeunpl" message="#[payload]"/>
                 
             </on-error-continue>
         </error-handler>
