@@ -1,0 +1,74 @@
+{
+  "basicConstraints": 64,
+  "criticalExtensionOIDs": [
+    "viverra",
+    "justo"
+  ],
+  "extendedKeyUsage": [
+    "amet",
+    "sed",
+    "lorem"
+  ],
+  "extensions": [
+    {
+      "criticality": false,
+      "oid": "dui"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Adah",
+      "type": 83
+    }
+  ],
+  "issuerDN": {
+    "commonName": "In",
+    "name": "Aja"
+  },
+  "issuerUniqueID": [
+    true,
+    false
+  ],
+  "issuerX500Principal": {
+    "name": "Clyde"
+  },
+  "keyUsage": [
+    true,
+    true,
+    true
+  ],
+  "name": "Clarence",
+  "nonCriticalExtensionOIDs": [
+    "arcu",
+    "nisi"
+  ],
+  "notAfter": "2026-01-12",
+  "notBefore": "2022-09-30",
+  "publicKey": {
+    "algorithm": "tempor",
+    "modulus": 67,
+    "params": 93,
+    "publicKey": "mi"
+  },
+  "serialNumber": 47,
+  "serialNumberObject": {
+    "serialNumber": 46
+  },
+  "sigAlgName": "consectetur",
+  "sigAlgOID": "Pellentesque",
+  "subjectAlternativeNames": [
+    {
+      "name": "Adolph",
+      "type": 53
+    }
+  ],
+  "subjectDN": {
+    "commonName": "erat",
+    "name": "Aimee"
+  },
+  "subjectX500Principal": {
+    "name": "Alverta"
+  },
+  "type": "elit",
+  "version": 45
+}

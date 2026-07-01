@@ -1,0 +1,75 @@
+{
+  "basicConstraints": 50,
+  "criticalExtensionOIDs": [
+    "aliquam",
+    "consectetur",
+    "eros"
+  ],
+  "extendedKeyUsage": [
+    "libero",
+    "ut",
+    "convallis"
+  ],
+  "extensions": [
+    {
+      "criticality": false,
+      "oid": "arcu"
+    }
+  ],
+  "issuerAlternativeNames": [
+    {
+      "name": "Agueda",
+      "type": 48
+    }
+  ],
+  "issuerDN": {
+    "commonName": "ipsum",
+    "name": "Alba"
+  },
+  "issuerUniqueID": [
+    false,
+    true
+  ],
+  "issuerX500Principal": {
+    "name": "Adriana"
+  },
+  "keyUsage": [
+    false,
+    true,
+    true
+  ],
+  "name": "Abbie",
+  "nonCriticalExtensionOIDs": [
+    "dolor",
+    "semper"
+  ],
+  "notAfter": "2024-02-07",
+  "notBefore": "2024-11-21",
+  "publicKey": {
+    "algorithm": "semper",
+    "modulus": 51,
+    "params": 82,
+    "publicKey": "dolor"
+  },
+  "serialNumber": 47,
+  "serialNumberObject": {
+    "serialNumber": 17
+  },
+  "sigAlgName": "ipsum",
+  "sigAlgOID": "lectus",
+  "subjectAlternativeNames": [
+    {
+      "name": "Aaron",
+      "type": 11
+    }
+  ],
+  "subjectDN": {
+    "commonName": "nibh",
+    "name": "Ammie"
+  },
+  "subjectX500Principal": {
+    "name": "Al"
+  },
+  "type": "Nam",
+  "version": 44
+}
