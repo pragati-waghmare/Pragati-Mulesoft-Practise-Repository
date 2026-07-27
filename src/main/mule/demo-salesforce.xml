@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:sdc="http://www.mulesoft.org/schema/mule/sdc"
+	xmlns:salesforce="http://www.mulesoft.org/schema/mule/salesforce"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/salesforce http://www.mulesoft.org/schema/mule/salesforce/current/mule-salesforce.xsd
+http://www.mulesoft.org/schema/mule/sdc http://www.mulesoft.org/schema/mule/sdc/current/mule-sdc.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<salesforce:sfdc-config name="Salesforce_Config" doc:name="Salesforce Config" doc:id="a2de92b5-4e4e-4291-a2c6-af98a1673bea" >
+		<salesforce:basic-connection username="sauraabh@mycareer.com" password="Smd@2026" securityToken="P0liMGT0d96a809yAGoOqVmn" url="https://login.salesforce.com/services/Soap/u/58.0" />
+	</salesforce:sfdc-config>
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="5b592131-07dc-4c4a-8c10-5670cf558099" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<!-- [STUDIO:"demo-salesforceFlow"]<flow name="demo-salesforceFlow" doc:id="4ff35666-316f-46bc-a620-84903e37a84a" >
+		<http:listener doc:name="Listener" doc:id="dd02998a-77c4-4af6-bdc7-cd48200940b7" config-ref="HTTP_Listener_config" path="/demo"/>
+		<logger level="INFO" doc:name="Logger" doc:id="ec0b9f61-3408-4d2a-8a6b-80b6811363b7" message='#["&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-start" ++ flow.name as String ++ "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"&#93;'/>
+		<salesforce:upsert objectType="Account" doc:name="Upsert" doc:id="ed63a12c-69b5-4993-9777-0ba55e3e0ea7" config-ref="Salesforce_Config" externalIdFieldName="Id"/>
+		<salesforce:query doc:name="Query" doc:id="755c3dbf-f1d2-4df8-aa14-649aff9dbf99" config-ref="Salesforce_Config">
+			<salesforce:salesforce-query ><![CDATA[Select id,Name  from AccountPlan&#93;&#93;></salesforce:salesforce-query>
+		</salesforce:query>
+		<logger level="INFO" doc:name="Logger" doc:id="103b05f0-2569-4acf-bd45-874ade5d3ce7" message="#[payload&#93;"/>
+	</flow> [STUDIO] -->
+	<!-- [STUDIO:"demo-salesforceFlow"]<flow name="demo-salesforceFlow" doc:id="51d8ea29-6bd8-47cd-a080-4917f05678e6" >
+		<salesforce:replay-channel-listener streamingChannel="/event/MyAccoutEvent__e" replayOption="ALL" doc:name="Replay channel listener" doc:id="9598c843-82fe-425a-97d5-688eeaa8a66f" config-ref="Salesforce_Config"/>
+		<logger level="INFO" doc:name="Logger" doc:id="35b37e6c-dd90-48d1-9b61-04ef6d70b760" />
+		<ee:transform doc:name="Transform Message" doc:id="67124bc6-b092-49d6-b130-55ad10d7f8e0" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+&#45;&#45;-
+payload&#93;&#93;></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="17c9c7ad-9155-40d5-8922-88acce53ccca" message="#[payload&#93;"/>
+	</flow> [STUDIO] -->
+	<flow name="demo-Salesforce-Flow" doc:id="03b3ab67-fe3f-4d4f-8dd3-1d0bbedf345d" >
+		<http:listener doc:name="Listener" doc:id="7d9864eb-3f7b-4c1c-958b-2cf6b577c824" config-ref="HTTP_Listener_config" path="/demo" />
+		<logger level="INFO" doc:name="Logger" doc:id="21f6bb0e-5846-4616-827e-cb67bc8ca258" message='#["----------------start " ++ flow.name as String ++ "--------------------"]' />
+		<set-payload value="#[[5,10,15,20,25,30,35,40,45,50]]" doc:name="Set Payload" doc:id="2e65676d-1b49-4e3c-8b0c-7ba3bc5c78b7" />
+		<logger level="INFO" doc:name="Logger1" doc:id="af4ee545-6ae0-4a16-a88e-1037315bf91c" message="#[payload]" />
+		<set-variable value="#[[]]" doc:name="Set Variable" doc:id="9058d1b9-f78b-45a0-90af-48d49d59d051" variableName="resultVar" />
+		<foreach doc:name="For Each" doc:id="6cf8144e-fdf8-4171-9b41-1a483e74aafd" batchSize="2" >
+			<ee:transform doc:name="Transform Message" doc:id="2c6145d0-bafb-4d11-8eed-ca8103b9da30" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload map (item) -> item * 2]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+			<set-variable value="#[output application/json&#10;---&#10;vars.resultVar + (payload)]" doc:name="Set Variable" doc:id="34c092f6-a841-4dff-8f0d-e04ff1922f4a" variableName="resultVar" />
+			<logger level="INFO" doc:name="Logger" doc:id="7e597444-0abd-4f7e-a026-7dfac0f91717" message="#[vars.resultVar]" />
+		</foreach>
+		<ee:transform doc:name="Transform Message" doc:id="1b6445c9-50c8-4d16-aea9-5cc54cfe87a4" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+vars.resultVar]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger2" doc:id="64a561dd-318a-4aeb-ba1d-dcb36def9318" message="#[payload]" />
+		<logger level="INFO" doc:name="Logger3" doc:id="4b0eb5be-3b15-4a40-b4ef-34ce5bac7230" message="#[payload]" />
+		<logger level="INFO" doc:name="Logger4" doc:id="0d829c22-4088-497d-a775-3e5cf71bda7e" message="#[payload]" />
+	</flow>
+</mule>
