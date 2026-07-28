@@ -30,7 +30,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				 <configuration>
-        			<cloudHubDeployment>
+        			<cloudhub2Deployment>
 			            <uri>https://anypoint.mulesoft.com</uri>
 			            <muleVersion>${mule.version}</muleVersion>
 			
@@ -45,7 +45,7 @@
 			            <workerType>${vCore}</workerType>
 			            <workers>${workers}</workers>
 			            <objectStoreV2>true</objectStoreV2>
-        			</cloudHubDeployment>
+        			</cloudhub2Deployment>
 
         			<classifier>mule-application</classifier>
     			</configuration>
